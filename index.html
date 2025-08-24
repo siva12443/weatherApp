@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Weather App Container -->
+    <div class="app-container" id="app">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="app-title">Weather Forecast</h1>
+            <p class="app-subtitle">Get accurate weather information for any location</p>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    class="search-input" 
+                    placeholder="Enter city name..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">
+                    <span class="search-icon">🔍</span>
+                </button>
+            </div>
+            <button id="locationBtn" class="location-btn">
+                <span class="location-icon">📍</span>
+                Use My Location
+            </button>
+        </section>
+
+        <!-- Loading State -->
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Getting weather data...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" id="errorMessage">
+            <span class="error-icon">⚠️</span>
+            <p id="errorText">Something went wrong. Please try again.</p>
+        </div>
+
+        <!-- Current Weather Display -->
+        <main class="weather-display" id="weatherDisplay">
+            <!-- Current Weather Card -->
+            <div class="current-weather-card">
+                <div class="weather-header">
+                    <h2 class="city-name" id="cityName">City Name</h2>
+                    <p class="current-date" id="currentDate">Today</p>
+                </div>
+                
+                <div class="weather-main">
+                    <div class="temperature-section">
+                        <span class="temperature" id="temperature">--°</span>
+                        <div class="weather-icon" id="weatherIcon">🌤️</div>
+                    </div>
+                    <div class="weather-description">
+                        <p class="description" id="description">Loading...</p>
+                        <p class="feels-like" id="feelsLike">Feels like --°</p>
+                    </div>
+                </div>
+
+                <!-- Weather Details -->
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="detail-icon">💧</span>
+                        <div class="detail-info">
+                            <span class="detail-label">Humidity</span>
+                            <span class="detail-value" id="humidity">--%</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">💨</span>
+                        <div class="detail-info">
+                            <span class="detail-label">Wind Speed</span>
+                            <span class="detail-value" id="windSpeed">-- km/h</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">👁️</span>
+                        <div class="detail-info">
+                            <span class="detail-label">Visibility</span>
+                            <span class="detail-value" id="visibility">-- km</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">🌡️</span>
+                        <div class="detail-info">
+                            <span class="detail-label">Pressure</span>
+                            <span class="detail-value" id="pressure">-- hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5-Day Forecast Section -->
+            <section class="forecast-section">
+                <h3 class="forecast-title">5-Day Forecast</h3>
+                <div class="forecast-container" id="forecastContainer">
+                    <!-- Forecast cards will be dynamically generated here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
