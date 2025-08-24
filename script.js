@@ -1,5 +1,5 @@
 // API Configuration
-const API_KEY = 'e92cb4f8f7dafbe812202cef042751c1';
+const API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY';
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 const GEO_URL = 'https://api.openweathermap.org/geo/1.0';
 
@@ -540,4 +540,5 @@ function initDemoMode() {
         
         setTimeout(() => demoNotice.remove(), 5000);
     }, 1000);
+
 }
